@@ -66,7 +66,7 @@ Boooooom! Your project setup is done.
 
 Let's run the development server:
 
-    $ python3 manage.py runserver
+    python3 manage.py runserver
 
 That’s it! Now you’re project is already run into a development server. 
 
