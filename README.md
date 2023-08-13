@@ -9,6 +9,7 @@ _Also_ want to cover up this things
 * Project Structure
 * Database Configuration
 * User Authentication and Authorization
+* 2FA integration
 * Templates and Static Files
 * Models and Database Interactions
 * Forms
@@ -20,7 +21,7 @@ _Also_ want to cover up this things
 * Version Control and Collaboration
 
 
-# Installation
+# Project Setup
 
 To use this project to your own machine follow this steps
 
@@ -71,5 +72,24 @@ Let's run the development server:
 That’s it! Now you’re project is already run into a development server. 
 
 Just click this link, [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+
+# Database Configuration
+
+I am using `MySQL` database here. To configure MySQL in your Django project, you'll need to update the `DATABASES` setting in your settings.py file as follows:
+
+    'default': {  
+    'ENGINE': 'django.db.backends.mysql',  
+    'NAME': 'django_learning',  
+    'USER': 'root',  
+    'PASSWORD': 'WrongPass01@',  
+    'HOST': '127.0.0.1',  
+    'PORT': '3306',  
+    'OPTIONS': {  
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+        }
+    }
+
+
 
 Thanks for reading.
