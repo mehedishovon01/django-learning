@@ -28,7 +28,7 @@ To use this project to your own machine follow this steps
 
 First of all, clone this repository using this command
 
-    $ git clone https://github.com/mehedishovon01/django-learning.git
+    git clone https://github.com/mehedishovon01/django-learning.git
 
 ### Create a virtualenv
 
@@ -36,21 +36,21 @@ Make a virtual environment to your project directory. Let's do this,
 
 If you have already an existing python3 virtualenv then run this
 
-    $ virtualenv venv
+    virtualenv venv
 
 Or if virtualenv is not install in you machine then run this
 
-    $ python3 -m venv venv
+    python3 -m venv venv
     
 Activate the virtual environment and verify it
 
-    $ . venv/bin/activate
+    . venv/bin/activate
 
 ### Install the dependencies
 
 Most of the projects have dependency name like requirements.txt file which specifies the requirements of that project, so let’s install the requirements of it from the file.
 
-    $ pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ### Create database
 
@@ -58,7 +58,7 @@ We have already sqlite3 setup in our project.
 
 So, simply apply the migrations:
 
-    $ python3 manage.py migrate
+    python3 manage.py migrate
     
 Boooooom! Your project setup is done.
 
