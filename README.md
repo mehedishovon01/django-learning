@@ -80,9 +80,9 @@ I am using `MySQL` database here. To configure MySQL in your Django project, you
 
     'default': {  
     'ENGINE': 'django.db.backends.mysql',  
-    'NAME': 'django_learning',  
+    'NAME': 'database_name',
     'USER': 'root',  
-    'PASSWORD': 'WrongPass01@',  
+    'PASSWORD': 'mysql_password',  
     'HOST': '127.0.0.1',  
     'PORT': '3306',  
     'OPTIONS': {  
