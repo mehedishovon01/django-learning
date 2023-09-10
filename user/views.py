@@ -6,5 +6,6 @@ from user.models import Profile
 def index(request):
     users = User.objects.all()
     profiles = Profile.objects.filter(id=1)
-    
-    return HttpResponse(users)
+
+    # return HttpResponse(users)
+    return render(request, 'index.html', {users: 'user'})

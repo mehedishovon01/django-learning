@@ -7,7 +7,7 @@ The goal of this project is to learn django professional and everyone can use th
 _Also_ want to cover up this things
 * Project Setup
 * Project Structure
-* Database Configuration
+* MySQL Database Configuration
 * User Authentication and Authorization
 * 2FA integration
 * Templates and Static Files

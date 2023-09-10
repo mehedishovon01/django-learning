@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-2w)-29(9qo5z5dbh!3r%qmlrxew!y_z7qh7cr+k2^ij4_y$@oi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -61,7 +61,7 @@ ADMIN_TWO_FACTOR_NAME = 'Django-Learning'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/ 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,6 +134,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = (
+    BASE_DIR/'static',
+)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # 'media' is my media folder
 MEDIA_URL = '/media/'

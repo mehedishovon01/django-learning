@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# My note
+my_notes.txt
+
 # Distribution / packaging
 .Python
 build/
