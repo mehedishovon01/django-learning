@@ -12,9 +12,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
 
     {% if title %}
-      <title>Django Blog - {{ title }}</title>
+      <title>Django Learning - {{ title }}</title>
     {% else %}
-      <title>Django Blog</title>
+      <title>Django Learning</title>
     {% endif %}
   </head>
   <body>
@@ -24,18 +24,21 @@
     </header>
     <main role="main" class="container">
       <div class="row">
-
         <!-- Message box -->
+        <div class="col-md-8">
         {% include '_partials/_message.html' %}
+        </div>
 
         <!-- Main contents -->
-        {% block content %}{% endblock %}
+        <div class="col-md-8">
+          {% block content %}
+          {% endblock %}
+        </div>
 
         <!-- Include sidebar from Partials -->
         <div class="col-md-4">
           {% include '_partials/_sidebar.html' %}
         </div>
-        
       </div>
     </main>
 
