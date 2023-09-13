@@ -1,25 +1,55 @@
 {% extends '_layouts/_base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-  <div class="content-section">
-    <div class="media">
-      <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" />
-      <div class="media-body">
-        <h2 class="account-heading">{{ user.first_name }} {{ user.last_name }}</h2>
-        <h5 class="text-primary">{{ user.username }}</h5>
-        <p class="text-secondary">{{ user.email }}</p>
+  <div class="checkout-area ptb-100">
+    <div class="container">
+      <div class="login-form-container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-12">
+          <div class="single-menu-product mb-30">
+            <div class="menu-product-img">
+                <img src="{{ user.profile.image.url }}" style="height: 150px;" alt="">
+            </div>
+            <div class="menu-product-content">
+                <h3><a href="product-details.html">{{ user.first_name }} {{ user.last_name }}</a></h3>
+                <div class="menu-product-price-rating">
+                    <div class="menu-product-price">
+                        <span class="menu-product-new">{{ user.username }}</span>
+                    </div>
+                </div>
+                <p>Email: {{ user.email }}</p>
+            </div>
+        </div>
+          <h3 class="border-bottom mb-4">Profile Details</h3>
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+              {{ u_form|crispy }}
+              {{ p_form|crispy }}
+            </fieldset>
+            <div class="order-button-payment">
+              <input type="submit" value="Update"/>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6 col-md-12 col-12">
+          <div class="your-order">
+            <h3>Welcome to the profile</h3>
+            <div class="payment-method">
+              <div class="payment-accordion">
+                <div class="panel-group" id="faq">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <form method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-      <fieldset class="form-group">
-        <legend class="border-bottom mb-4">Profile Info </legend>
-        {{ u_form|crispy }}
-        {{ p_form|crispy }}
-      </fieldset>
-      <div class="form-group">
-        <button class="btn btn-outline-info" type="submit">Update</button>
-      </div>
-    </form>
+    </div>
   </div>
 {% endblock %}

@@ -1,9 +1,13 @@
 {% extends "_layouts/_base.html" %}
 {% block content %}
-    <h2>You have been logged out</h2>
-    <div class="border-top pt-3">
-        <link class="text-muted">
-            <a href="{% url 'login' %}">Log In Again</a>
-    </link>
+<div class="register-area ptb-100">
+    <div class="container">
+        <h2>You have been logged out</h2>
+        <div class="border-top pt-3">
+            <link class="text-muted">
+                <a href="{% url 'login' %}">Log In Again</a>
+            </link>
+        </div>
     </div>
+</div>
 {% endblock content %}

@@ -1,19 +1,44 @@
 {% extends '_layouts/_base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-  <div class="content-section">
-    <form method="POST">
-      {% csrf_token %}
-      <fieldset class="form-group">
-        <legend class="border-bottom mb-4">Log In</legend>
-        {{ form|crispy }}
-      </fieldset>
-      <div class="form-group">
-        <button class="btn btn-outline-info" type="submit">Login</button>
+  <div class="register-area ptb-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 col-12">
+          <div class="product-description-review-area">
+            <div class="container">
+              <div class="product-description-review text-center">
+                <div class="section-title-3 text-center mb-50">
+                  <h2>Welcome Back</h2>
+                </div>
+                <div class="description-review-text tab-content">
+                  <div class="tab-pane active show fade" id="pro-dec" role="tabpanel">
+                    <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</label>
+                  </div>
+                  <div class="tab-pane fade" id="pro-review" role="tabpanel">
+                    <a href="#">Be the first to write your review!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="your-order">
+            <h3>Login</h3>
+            <div class="your-order-table table-responsive">
+              <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">{{ form|crispy }}</fieldset>
+                <div class="order-button-payment">
+                  <input type="submit" value="Log In" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </form>
-    <div class="border-top pt-3">
-      <small class="text-muted">Need An Account? <a class="ml-2" href="">Sign Up Now</a></small>
     </div>
   </div>
+  {% include '_partials/_subscriptions.html' %}
 {% endblock %}

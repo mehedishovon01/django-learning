@@ -34,9 +34,11 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     # Installed Apps
     'admin_two_factor.apps.TwoStepVerificationConfig',
-    'user.apps.UserConfig',
     'crispy_forms',
     'crispy_bootstrap5',
+
+    # Apps
+    'user.apps.UserConfig',
 
     # System Default Apps
     'django.contrib.admin',

@@ -1,51 +1,57 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
+  <!-- Mirrored from htmldemo.net/ezone/ezone/index-book.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Jul 2023 14:34:18 GMT -->
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Book - eCommerce HTML5 Template</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}' %}" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-
-    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
-
-    {% if title %}
-      <title>Django Learning - {{ title }}</title>
-    {% else %}
-      <title>Django Learning</title>
-    {% endif %}
+    <!-- all css here -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/pe-icon-7-stroke.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/bundle.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+    <script src="{% static 'assets/js/vendor/modernizr-3.11.7.min.js' %}"></script>
   </head>
+
   <body>
-    <header class="site-header">
-      <!-- Navigationbar are here -->
-      {% include '_partials/_navigationbar.html' %}
-    </header>
-    <main role="main" class="container">
-      <div class="row">
-        <!-- Message box -->
-        <div class="col-md-8">
-        {% include '_partials/_message.html' %}
-        </div>
+    {% include '_partials/_header.html' %}
 
-        <!-- Main contents -->
-        <div class="col-md-8">
-          {% block content %}
-          {% endblock %}
-        </div>
+    <div class="container">
+      {% include '_partials/_message.html' %}
+    </div>
 
-        <!-- Include sidebar from Partials -->
-        <div class="col-md-4">
-          {% include '_partials/_sidebar.html' %}
-        </div>
-      </div>
-    </main>
+    {% block content %}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    {% endblock %}
+
+    {% include '_partials/_footer.html' %}
+
+    <!-- all js here -->
+    <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
   </body>
+
+  <!-- Mirrored from htmldemo.net/ezone/ezone/index-book.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Jul 2023 14:35:55 GMT -->
 </html>
